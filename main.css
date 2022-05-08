@@ -1,15 +1,103 @@
 body {
   text-align: center;
+  background: linear-gradient(#2b87ff, #ff9ce3, #d4ff9c, cyan, yellow);
+  padding: 0 10px;
+  font-family: sans-serif;
 }
 
-h1, h2 {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+h1 {
+  color: white;
+  font-size: 2.7em;
 }
 
-img {
-  width: 300px;
-  height: 300px;
-  border-radius: 100%;
+h2 {
+  margin: 0;
+}
+
+header {
+  width: 100%;
+  max-width: 600px;
+  height: 100vh;
+  margin: 0 auto;
+  position: relative;
+}
+
+.title {
+  position: absolute;
+  width: 100%;
+  max-width: 800px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+header img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+section img {
+  width: 100%;
+  border-radius: 10px 10px 0px 0px;
   object-fit: cover;
 }
 
+p {
+  margin: 0;
+}
+
+section {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 10px;
+  margin: 20px auto;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+article {
+  padding: 20px 0;
+}
+
+section.right {
+  transform: translateX(300%)
+}
+
+section.left {
+  transform: translateX(-300%)
+}
+
+footer {
+  padding: 30px 0;
+}
+
+.link {
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+
+.link a {
+  position: absolute;
+  font-size: 1.2em;
+  left: 0;
+  right: 0;
+  top:0;
+  bottom: 0;
+  margin: auto;
+  font-weight: bold;
+  color: #0091EA;
+  text-align: center;
+  height: 100px;
+  animation: bound-anim 1s infinite;
+}
+
+@keyframes bound-anim {
+  0%,100% {top: 0;transform: scale(1);}
+  30% {top: -25%;}
+  50% {transform: scale(1);}
+  90% {top: 0;transform: scale(1.1,0.8);}
+}
